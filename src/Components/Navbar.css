@@ -1,0 +1,76 @@
+/* Tamaño del logo */
+.logo {
+    height: 125px; /* Ajusta el tamaño que prefieras */
+    width: auto;
+    position: absolute; /* Sacamos el logo del flujo normal */
+    top: 50%;
+    transform: translateY(-50%); /* Centramos el logo verticalmente */
+  }
+  
+  /* Navbar general */
+  .navbar {
+    background-color: #ffffff;
+    padding: 0 1rem;
+    height: 150px; /* Fijamos la altura del navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Ajuste del texto de la marca (laboratorio) */
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #023c8a;
+    text-transform: uppercase;
+    margin-left: 100px; /* Margen para que el texto no se solape con el logo */
+  }
+  
+  /* Otras propiedades del navbar */
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  .nav-link {
+    color: #333333;
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #d97131;
+  }
+  
+  .login-btn {
+    background-color: #d97131;
+    color: #ffffff !important;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #023c8a;
+    color: #ffffff;
+  }
+  
+  @media (max-width: 992px) {
+    .navbar-nav {
+      margin-top: 1rem;
+    }
+  
+    .nav-link {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+  

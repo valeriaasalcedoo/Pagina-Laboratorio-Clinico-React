@@ -1,0 +1,33 @@
+/* src/Components/Dashboard.css */
+.dashboard {
+  display: flex;
+  margin-left: 250px; /* Espacio para el sidebar */
+  min-height: 100vh;
+  background-color: #f8f9fc; /* Fondo suave */
+  padding: 2rem;
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Diseño de rejilla para tarjetas */
+  gap: 1.5rem;
+}
+
+/* Estilo de las tarjetas */
+.card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.card p {
+  color: #555;
+  font-size: 1rem;
+}

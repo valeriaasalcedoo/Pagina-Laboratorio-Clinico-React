@@ -1,0 +1,29 @@
+.hero {
+    background-image: url('https://cemp.es/wp-content/uploads/2022/05/BLOGCEMP-especialidades-analisis-laboratorio-clinico-0522.jpg.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* Color del texto */
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-content {
+    z-index: 1;
+    padding: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra de texto para mejorar la legibilidad */
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }

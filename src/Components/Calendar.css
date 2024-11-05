@@ -1,0 +1,22 @@
+.calendar {
+  background-color: white;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.calendar h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.calendar-view {
+  width: 100%;
+}
+
+.calendar-info {
+  margin-top: 1rem;
+  color: #555;
+  font-size: 1rem;
+}
