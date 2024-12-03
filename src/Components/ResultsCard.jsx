@@ -1,13 +1,16 @@
-// src/Components/ResultsCard.js
 import React from 'react';
-import './ResultsCard.css';
+import './Card.css';
 
 const ResultsCard = () => {
   return (
-    <div className="card">
+    <div className="card results-card">
       <h3>Resultados Clínicos</h3>
-      <p>Resultado de análisis de sangre disponible para descarga</p>
-      <button className="download-button">Descargar Resultados</button>
+      <p>Resultados disponibles para descarga:</p>
+      <ul className="results-list">
+        <li>Análisis de Sangre (10/12/2023)</li>
+        <li>Prueba de Glucosa (15/12/2023)</li>
+      </ul>
+      <button className="results-download-button">Descargar Todo</button>
     </div>
   );
 };

@@ -1,25 +1,50 @@
-/* src/Components/ResultsCard.css */
 .card {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 400px;
-    margin: 1rem auto;
-  }
-  
-  .download-button {
-    background-color: #4e73df;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-  
-  .download-button:hover {
-    background-color: #3b5cb8;
-  }
-  
+  background: #ffffff; /* Fondo blanco limpio */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efectos de transición */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efecto de elevación al hacer hover */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hacer hover */
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50; /* Texto oscuro para contraste */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #7f8c8d; /* Texto gris para descripción */
+  margin-bottom: 20px;
+}
+
+.download-button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #4a90e2, #357ab8); /* Gradiente azul */
+  color: #ffffff; /* Texto blanco */
+  border: none;
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el botón */
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.download-button:hover {
+  background: linear-gradient(135deg, #357ab8, #2c6cb6); /* Gradiente más oscuro al hacer hover */
+  transform: translateY(-2px); /* Ligero efecto de elevación */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.download-button:active {
+  transform: translateY(0); /* Elimina elevación al hacer clic */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+}

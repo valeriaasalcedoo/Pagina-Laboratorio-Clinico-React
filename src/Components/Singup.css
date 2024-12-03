@@ -1,0 +1,165 @@
+/* Contenedor principal */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f0f3, #e4e4e9); /* Fondo degradado claro */
+}
+
+/* Tarjeta del registro */
+.signup-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid #e0e0e0; /* Borde sutil */
+}
+
+/* Títulos */
+.signup-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #333; /* Gris oscuro */
+  font-weight: bold;
+}
+
+.signup-subtitle {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #555; /* Gris medio */
+}
+
+/* Campos de entrada */
+.input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.input-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #666; /* Gris suave */
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #d6d6d6; /* Borde claro */
+  border-radius: 10px; /* Bordes suaves */
+  font-size: 1rem;
+  background: #f9f9f9; /* Fondo claro */
+  color: #333; /* Texto gris oscuro */
+  outline: none;
+  transition: box-shadow 0.3s, border-color 0.3s; /* Suaves transiciones */
+}
+
+.input-field:focus {
+  border-color: #007aff; /* Azul macOS */
+  box-shadow: 0 0 5px rgba(0, 122, 255, 0.3); /* Efecto de enfoque */
+}
+
+/* Botón de registro */
+.signup-button {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #007aff, #0056b3); /* Gradiente azul macOS */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.signup-button:hover {
+  background: linear-gradient(135deg, #0056b3, #004494); /* Azul más oscuro */
+  transform: translateY(-2px); /* Elevación ligera */
+}
+
+/* Link a iniciar sesión */
+.login-link {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #777;
+}
+
+.login-link a {
+  color: #007aff; /* Azul macOS */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #0056b3; /* Azul más oscuro */
+  text-decoration: underline;
+}
+
+/* Línea divisoria */
+.divider {
+  margin: 1rem 0;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.divider:before,
+.divider:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider:before {
+  left: 0;
+}
+
+.divider:after {
+  right: 0;
+}
+
+/* Botones sociales */
+.social-button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #555;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f8f8f8; /* Fondo claro */
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.social-button.google:hover {
+  background: #e0e0e0; /* Fondo gris al hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
+}
+
+.social-button.apple {
+  background: #333; /* Negro */
+  color: white;
+}
+
+.social-button.apple:hover {
+  background: #111; /* Negro más intenso */
+}

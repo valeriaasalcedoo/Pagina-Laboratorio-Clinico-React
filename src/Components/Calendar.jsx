@@ -1,16 +1,13 @@
-// src/Components/Calendar.js
 import React from 'react';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
 import './Calendar.css';
 
-const CalendarView = () => {
+const Calendar = () => {
   return (
-    <div className="calendar card">
-      <h3>Calendario de Citas</h3>
-      <Calendar className="calendar-view" />
+    <div className="calendar">
+      <h2>Calendario</h2>
+      <div className="calendar-view">[Vista del Calendario]</div>
     </div>
   );
 };
 
-export default CalendarView;
+export default Calendar;

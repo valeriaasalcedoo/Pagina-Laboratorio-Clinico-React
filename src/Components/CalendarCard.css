@@ -1,9 +1,31 @@
-/* src/Components/CalendarCard.css */
 .card {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #34495e;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #357ab8;
+}

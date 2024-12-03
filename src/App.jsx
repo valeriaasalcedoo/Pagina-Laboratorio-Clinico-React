@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import './App.css';
 import About from './Components/AboutUs';
@@ -6,22 +5,21 @@ import CalendarCard from './Components/CalendarCard';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import Hero from './Components/Hero';
+import Login from './Components/Login';
 import Navbar from './Components/Navbar';
 import Profile from './Components/Profile';
 import ResultsCard from './Components/ResultsCard';
 import Services from './Components/Services';
 import Sidebar from './Components/Sidebar';
-import WelcomeCard from './Components/WelcomeCard'; // Tarjeta de bienvenida
+import SignUp from './Components/SignUp';
+import WelcomeCard from './Components/WelcomeCard';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [activeView, setActiveView] = useState('welcome'); // Vista inicial en el dashboard
+  const [currentView, setCurrentView] = useState('landing'); // Controla qué vista mostrar
+  const [activeView, setActiveView] = useState('welcome'); // Controla la vista activa del dashboard
 
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
-
-  const renderView = () => {
+  // Renderizar contenido dinámico del dashboard
+  const renderDashboardView = () => {
     switch (activeView) {
       case 'calendar':
         return <CalendarCard />;
@@ -31,32 +29,46 @@ function App() {
         return <Profile />;
       case 'welcome':
       default:
-        return <WelcomeCard />; // Tarjeta de bienvenida
+        return <WelcomeCard />;
     }
   };
 
   return (
     <div>
-      {isLoggedIn ? (
-        // Dashboard que se muestra después de iniciar sesión
-        <div className="dashboard">
-          <Sidebar setActiveView={setActiveView} />
-          <div className="dashboard-content">
-            <div className="dashboard-cards">
-              {renderView()}
-            </div>
-          </div>
-        </div>
-      ) : (
-        // Landing page visible antes de iniciar sesión
+      {currentView === 'landing' && (
         <>
-          <Navbar onLogin={handleLogin} />
+          <Navbar onLogin={() => setCurrentView('login')} />
           <Hero />
           <About />
           <Services />
           <Contact />
           <Footer />
         </>
+      )}
+
+      {currentView === 'login' && (
+        <div className="login-view">
+          <Login
+            onSwitchForm={() => setCurrentView('signup')}
+            onLogin={() => setCurrentView('dashboard')} // Cambia a dashboard
+          />
+        </div>
+      )}
+
+      {currentView === 'signup' && (
+        <div className="signup-view">
+          <SignUp onSwitchForm={() => setCurrentView('login')} />
+        </div>
+      )}
+
+      {currentView === 'dashboard' && (
+        <div className="dashboard">
+          <Sidebar
+            setActiveView={setActiveView}
+            onLogout={() => setCurrentView('landing')} // Cambia a la vista de landing
+          />
+          <div className="dashboard-content">{renderDashboardView()}</div>
+        </div>
       )}
     </div>
   );

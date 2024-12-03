@@ -1,0 +1,133 @@
+/* Estilo general del contenedor */
+.card {
+    background: #ffffff;
+    border-radius: 16px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px; /* Ancho máximo */
+    margin: 20px auto; /* Centrar en la página */
+  }
+  
+  /* Título principal */
+  .card h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #34495e; /* Azul grisáceo */
+    margin-bottom: 20px;
+  }
+  
+  /* Subtítulo */
+  .card p {
+    font-size: 1rem;
+    color: #7f8c8d; /* Gris sutil */
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  /* Lista de citas */
+  .card ul {
+    list-style: none; /* Elimina los puntos predeterminados */
+    padding: 0;
+    margin: 0 0 20px;
+    text-align: left;
+  }
+  
+  .card ul li {
+    font-size: 1rem;
+    color: #2c3e50;
+    padding: 8px 0;
+    position: relative;
+  }
+  
+  .card ul li::before {
+    content: '•'; /* Personaliza el marcador */
+    color: #4a90e2; /* Azul */
+    font-size: 1.2rem;
+    margin-right: 10px;
+    position: absolute;
+    left: -20px;
+  }
+  
+  /* Sección del formulario */
+  .form-section {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .form-section h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 15px;
+  }
+  
+  /* Campos del formulario */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    color: #34495e;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #34495e;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    border-color: #4a90e2; /* Azul al enfocar */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.4); /* Sombra azul al enfocar */
+    outline: none;
+  }
+  
+  /* Botones */
+  .button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .button-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button-group .save-button {
+    background: linear-gradient(135deg, #4a90e2, #357ab8); /* Gradiente azul */
+    color: white;
+  }
+  
+  .button-group .save-button:hover {
+    background: linear-gradient(135deg, #357ab8, #2c6cb6); /* Azul más oscuro */
+    transform: translateY(-2px);
+  }
+  
+  .button-group .cancel-button {
+    background: #e74c3c; /* Rojo */
+    color: white;
+  }
+  
+  .button-group .cancel-button:hover {
+    background: #c0392b; /* Rojo más oscuro */
+    transform: translateY(-2px);
+  }
+  

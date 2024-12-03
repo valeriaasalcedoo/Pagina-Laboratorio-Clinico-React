@@ -1,4 +1,3 @@
-// src/Components/Navbar.js
 import React from 'react';
 import logo from '../assets/logo.png';
 import './Navbar.css';
@@ -8,7 +7,7 @@ function Navbar({ onLogin }) {
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <img src={logo} alt="Logo" className="logo" /> 
+          <img src={logo} alt="Logo" className="logo" />
         </a>
         <button
           className="navbar-toggler"
@@ -24,24 +23,18 @@ function Navbar({ onLogin }) {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#AboutUs">
-                Quienes Somos
-              </a>
+              <a className="nav-link" href="#AboutUs">Quienes Somos</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#Services">
-                Servicios
-              </a>
+              <a className="nav-link" href="#Services">Servicios</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#Contact">
-                Contacto
-              </a>
+              <a className="nav-link" href="#Contact">Contacto</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link login-btn" href="#" onClick={onLogin}>
+              <button className="btn login-btn" onClick={onLogin}>
                 Login
-              </a>
+              </button>
             </li>
           </ul>
         </div>

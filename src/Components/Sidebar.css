@@ -1,29 +1,61 @@
-/* src/Components/Sidebar.css */
+/* Sidebar general */
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 250px;
-  background-color: #4e73df;
-  color: #ffffff;
+  width: 240px;
+  background: linear-gradient(135deg, #f8f9fa, #e6e8eb); /* Fondo degradado */
+  color: #2c3e50; /* Texto oscuro */
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  padding-top: 2rem;
+  height: 100vh;
+  position: fixed;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0 15px 15px 0; /* Bordes redondeados */
 }
 
+/* Lista de opciones */
 .sidebar ul {
   list-style: none;
   padding: 0;
-  width: 100%;
+  margin: 0;
 }
 
 .sidebar li {
-  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+  color: #2c3e50; /* Texto oscuro */
+  font-size: 1rem;
 }
 
 .sidebar li:hover {
-  background-color: #3b5cb8;
+  background: rgba(0, 123, 255, 0.1); /* Fondo azul claro al hover */
+  transform: translateX(5px); /* Desplazamiento al hover */
+}
+
+.sidebar li.active {
+  background: #4a90e2; /* Fondo azul para la opción activa */
+  color: white; /* Texto blanco */
+  font-weight: bold;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1); /* Sombra interior */
+}
+
+/* Contenedor del Logout */
+.logout-container {
+  margin-top: auto; /* Empuja el logout al fondo */
+  padding-top: 20px; /* Separación con las opciones */
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Línea superior para destacar */
+}
+
+.logout-container li {
+  color: #e74c3c; /* Rojo para destacar */
+}
+
+.logout-container li:hover {
+  background: rgba(231, 76, 60, 0.1); /* Fondo rojo claro */
+  transform: translateX(5px); /* Efecto hover */
 }
